@@ -7,6 +7,7 @@ const routes = [
 
   // upload
   'get    /upload/signed-url        upload/getSignedUrl',
+ 
 ];
 
 module.exports = declareApiRoutes(routes);
