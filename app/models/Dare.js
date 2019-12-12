@@ -1,15 +1,28 @@
 const mongoose = require ('mongoose');
 const Schema = mongoose.Schema;
 
+// const Interest = require('./Interest');
+
 const DareSchema = new Schema({
 
-dare : String,
-interest : String,
+// interestId : {
+//   type:'ObjectId',
+//   ref:Interest
+// },
 points : Number,
 description: String,
 latitude : Number,
 longitude : Number,
+
 image : String,
+
+startdate :{
+  type:Date
+},
+
+enddate :{
+  type:Date
+},
 },
 {
 collection: 'dare',
