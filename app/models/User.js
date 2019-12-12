@@ -16,8 +16,24 @@ const UserSchema = new mongoose.Schema({
     required: true,
     select: false,
   },
-  name: String,
-  avatar: String,
+  name: {
+    type: String,
+    required: true,
+  },
+  mobile:{
+    type: Number,
+    required: true,
+    unique: true,
+  },
+  latitude:{
+    type: Number,
+    required: true,
+  }, 
+  longitude:{
+    type: Number,
+    required: true,
+  }
+
 }, {
   collection: 'user',
   timestamps: true,
