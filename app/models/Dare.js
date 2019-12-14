@@ -1,34 +1,34 @@
-const mongoose = require ('mongoose');
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 
 // const Interest = require('./Interest');
 
 const DareSchema = new Schema({
 
-// interestId : {
-//   type:'ObjectId',
-//   ref:Interest
-// },
-points : Number,
-description: String,
-latitude : Number,
-longitude : Number,
+  // interestId : {
+  //   type:'ObjectId',
+  //   ref:Interest
+  // },
+  points: Number,
+  description: String,
+  latitude: Number,
+  longitude: Number,
 
-image : String,
+  image: String,
 
-startdate :{
-  type:Date
-},
+  startdate: {
+    type: Date,
+  },
 
-enddate :{
-  type:Date
-},
+  enddate: {
+    type: Date,
+  },
 },
 {
-collection: 'dare',
-timestamps: true,
-userAudits: true,
+  collection: 'dare',
+  timestamps: true,
+  userAudits: true,
 });
 
 module.exports = mongoose.model('Dare', DareSchema);
-
