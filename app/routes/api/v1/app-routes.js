@@ -11,7 +11,7 @@ const routes = [
 
 
   // Interest
-  'post   /interest     interest/createOne',
+  // 'post   /interest     interest/createOne',
   // Interest
   'get   /interest                  interest/getInterests',
 ];

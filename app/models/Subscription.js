@@ -4,11 +4,11 @@ const User = require('./User');
 
 const SubscriptionSchema = new mongoose.Schema({
   interestId: {
-    type: 'OjectId',
+    type: 'ObjectId',
     ref: Interest,
   },
   userId: {
-    type: 'OjectId',
+    type: 'ObjectId',
     ref: User,
     required: true,
   },
@@ -17,7 +17,7 @@ const SubscriptionSchema = new mongoose.Schema({
     default: false,
   },
 }, {
-  collection: 'subcription',
+  collection: 'subscription',
   timestamps: true,
   userAudits: true,
 });
