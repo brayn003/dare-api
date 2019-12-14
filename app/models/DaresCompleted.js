@@ -18,4 +18,6 @@ const DaresCompletedSchema = ({
   userAudits: true,
 });
 
+
+
 module.exports = mongoose.model('Dares_Completed', DaresCompletedSchema);

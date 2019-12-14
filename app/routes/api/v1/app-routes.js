@@ -10,6 +10,9 @@ const routes = [
 
   // Interest
   'post   /interest     interest/createOne',
+
+  // daresCompleted
+  'post   /daresCompleted     darescompleted/daresCompleted',
 ];
 
 
