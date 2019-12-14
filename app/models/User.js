@@ -20,19 +20,19 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  mobile:{
+  mobile: {
     type: Number,
     required: true,
     unique: true,
   },
-  latitude:{
+  latitude: {
     type: Number,
     required: true,
-  }, 
-  longitude:{
+  },
+  longitude: {
     type: Number,
     required: true,
-  }
+  },
 
 }, {
   collection: 'user',
