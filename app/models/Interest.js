@@ -7,7 +7,9 @@ const InterestSchema = new mongoose.Schema({
   unique: true
   },
   ImageURL: {
-    
+    type: 'string',
+    required: true,
+    unique: true
   }
 }, {
   collection: 'Interest',
