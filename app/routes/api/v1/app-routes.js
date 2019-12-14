@@ -9,8 +9,8 @@ const routes = [
   'get    /upload/signed-url        upload/getSignedUrl',
 
   // Interest
-  'post   /daresCompleted     darescompleted/daresCompleted',
-  //Interest
+  'post   /dare/complete     darescompleted/daresCompleted',
+  // Interest
   'get   /interest                  interest/getInterests',
 ];
 
