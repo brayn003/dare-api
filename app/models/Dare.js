@@ -13,7 +13,6 @@ points : Number,
 description: String,
 latitude : Number,
 longitude : Number,
-
 image : String,
 
 startdate :{
@@ -29,6 +28,7 @@ collection: 'dare',
 timestamps: true,
 userAudits: true,
 });
+
 
 module.exports = mongoose.model('Dare', DareSchema);
 
