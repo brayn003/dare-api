@@ -1,10 +1,15 @@
 const mongoose = require('mongoose');
 
-const InterestsSchema = new mongoose.Schema({
+const InterestSchema = new mongoose.Schema({
   Interest: {
   type: 'string',
   required: true,
   unique: true
+  },
+  ImageURL: {
+    type: 'string',
+    required: true,
+    unique: true
   }
 }, {
   collection: 'Interest',
@@ -12,6 +17,4 @@ const InterestsSchema = new mongoose.Schema({
   timestamps: true,
 });
 
-InterestsSchema.statics.createOne = async function () {
-  const newInterest = 
-}
+module.exports = mongoose.model('Interest', InterestSchema);
