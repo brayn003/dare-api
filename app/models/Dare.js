@@ -5,10 +5,10 @@ const Schema = mongoose.Schema;
 
 const DareSchema = new Schema({
 
-// interestId : {
-//   type:'ObjectId',
-//   ref:Interest
-// },
+ interestId : {
+  type:'ObjectId',
+  ref:Interest
+ },
 points : Number,
 description: String,
 latitude : Number,
