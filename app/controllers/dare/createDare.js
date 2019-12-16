@@ -1,9 +1,10 @@
 const Dare = require('../../models/Dare');
+// const Interest = require('../../models/Interest');
 
-module.exports = async (req,res) => {
-const {interestId} = req.body
-const dare = await dare.addOne(interestId, interest.id);
-return res.status(201).json(dare);
-  
-}
-module.exports=controller;
+
+const controller = async (req, res) => {
+  const { interestId, ...rest } = req.body;
+  const dare = await Dare.create({ interestId, ...rest });
+  return res.status(201).json(dare);
+};
+module.exports = controller;
