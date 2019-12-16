@@ -8,6 +8,7 @@
     "func-names": 0,
     "import/no-unresolved": [2, { "ignore": ["^~"] }],
     "global-require": 0,
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "linebreak-style": 0
   }
 }

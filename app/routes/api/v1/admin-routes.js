@@ -10,6 +10,9 @@ const routes = [
 
   // upload
   'get    /upload/signed-url        upload/getSignedUrl',
+
+  //Interest
+  'post   /interest         Interest/createOne',
 ];
 
 module.exports = declareApiRoutes(routes);

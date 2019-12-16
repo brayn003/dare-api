@@ -1,8 +1,9 @@
 const Interest = require('~models/Interest');
 
 const controller = async (req, res) => {
-    const interest = await Interest.create(req.body);
-    res.send(interest);
+    const { query } = req;
+    const Interests = await Interest.getInterest(params);
+    return res.json(Interests);
 }
 
 module.exports = controller;

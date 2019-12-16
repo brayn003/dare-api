@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-
 const Interest = require('./Interest');
 
 const DareSchema = new Schema({
