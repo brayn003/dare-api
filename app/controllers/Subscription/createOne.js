@@ -8,9 +8,9 @@ const controller = async (req, res) => {
   if (!userId) {
     throw new ValidationError('The user_id does not exists');
   }
-  if (!interestId) {
-    throw new ValidationError('The interest_id does not exists');
-  }
+  // if (!interestId) {
+  //   throw new ValidationError('The interest_id does not exists');
+  // }
 
   const subscription = await Subscription.create({ userId, interestId, ...rest });
   res.json(subscription);
