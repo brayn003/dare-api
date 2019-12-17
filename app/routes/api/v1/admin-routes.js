@@ -11,7 +11,7 @@ const routes = [
   // upload
   'get    /upload/signed-url        upload/getSignedUrl',
 
-  //Interest
+  // Interest
   'post   /interest         Interest/createOne',
 ];
 
