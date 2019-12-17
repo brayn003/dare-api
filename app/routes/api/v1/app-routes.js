@@ -10,15 +10,15 @@ const routes = [
 
   // Interest
   'post   /daresCompleted     darescompleted/daresCompleted',
-  //Interest
-<<<<<<< HEAD
+  // Interest
+
   // 'post   /interest     interest/createOne',
 
-  //Dare
-  'post /dare            dare/createDare',
-=======
-  'get   /interest                  interest/getInterests',
->>>>>>> 0e2a52df87c3d0c7146fbb75736dd43c22c716d3
+  // Dare
+  'post    /dares                      dare/createDare',
+
+  'get     /interest                  interest/getInterests',
+
 ];
 
 

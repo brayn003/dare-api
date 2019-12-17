@@ -3,8 +3,10 @@ const Dare = require('../../models/Dare');
 
 
 const controller = async (req, res) => {
-  const { interestId, ...rest } = req.body;
-  const dare = await Dare.create({ interestId, ...rest });
+  const { body } = req;
+  console.log(body);
+  const dare = await Dare.create(body);
+  console.log(dare);
   return res.status(201).json(dare);
 };
 module.exports = controller;
