@@ -3,6 +3,8 @@ const mongoosePaginate = require('mongoose-paginate');
 const bcrypt = require('bcrypt-nodejs');
 const omit = require('lodash/omit');
 
+const { ValidationError } = require('../helpers/extended-errors');
+
 const { createJWT } = require('../helpers/jwt-service');
 
 const UserSchema = new mongoose.Schema({
@@ -11,43 +13,48 @@ const UserSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+
   password: {
     type: String,
     required: true,
     select: false,
   },
-  name: {
-    type: String,
-    required: true,
-  },
+
   mobile: {
     type: Number,
-    required: true,
+    // required: true,
     unique: true,
   },
+
   latitude: {
     type: Number,
-    required: true,
-  },
-  longitude: {
-    type: Number,
-    required: true,
+    // required: true,
   },
 
+  longitude: {
+    type: Number,
+    // required: true,
+  },
 }, {
   collection: 'user',
   timestamps: true,
   userAudits: true,
 });
 
-UserSchema.statics.authenticate = async function (email, password) {
-  const user = await this.findOne({ email }).select('+password');
+UserSchema.statics.authenticate = async function (username, password) {
+  const user = await this.findOne({ username }).select('+password');
   if (!user) {
-    throw new Error('User does not exist');
+    throw new ValidationError('User does not exist');
   }
   const match = bcrypt.compareSync(password, user.password);
   if (!match) {
-    throw new Error('Password is incorrect');
+    throw new ValidationError('Password is incorrect');
   }
   const token = await createJWT(
     omit(user.toJSON(), ['password']),
@@ -67,8 +74,7 @@ UserSchema.statics.getUsers = async function (params) {
 };
 
 UserSchema.statics.createOne = async function (params) {
-  const { email, name, password } = params;
-  const user = await this.create({ email, name, password });
+  const user = await this.create(params);
   return omit(user.toJSON(), ['password']);
 };
 

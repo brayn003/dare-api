@@ -11,6 +11,10 @@ const up = async () => {
     message: 'Enter your full name: ',
   }, {
     type: 'input',
+    name: 'username',
+    message: 'Enter a username: ',
+  }, {
+    type: 'input',
     name: 'email',
     message: 'Enter your email: ',
   }, {
@@ -19,8 +23,12 @@ const up = async () => {
     message: 'Enter a password for your account: ',
   }];
   const answers = await inquirer.prompt(questions);
-  const { name, email, password } = answers;
-  const user = await User.createOne({ name, email, password });
+  const {
+    name, username, email, password,
+  } = answers;
+  const user = await User.createOne({
+    name, username, email, password,
+  });
   await Admin.addOne(user.id);
   console.log('Added a new user and added as superadmin');
 };

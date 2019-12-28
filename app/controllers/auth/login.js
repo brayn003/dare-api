@@ -1,8 +1,9 @@
 const User = require('~models/User');
 
 async function controller(req, res) {
-  const { email, password } = req.body;
-  const token = await User.authenticate(email, password);
+  console.log('her', req.body);
+  const { username, password } = req.body;
+  const token = await User.authenticate(username, password);
   return res.json({ token });
 }
 
