@@ -11,7 +11,6 @@ const DareSchema = new Schema({
     ref: User,
     required: true,
   },
-
   interestId: {
     type: 'ObjectId',
     ref: Interest,
@@ -21,14 +20,8 @@ const DareSchema = new Schema({
   latitude: Number,
   longitude: Number,
   image: String,
-
-  startdate: {
-    type: Date,
-  },
-
-  enddate: {
-    type: Date,
-  },
+  startdate: Date,
+  enddate: Date,
 },
 {
   collection: 'dare',
