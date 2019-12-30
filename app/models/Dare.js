@@ -3,8 +3,14 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const Interest = require('./Interest');
+const User = require('./User');
 
 const DareSchema = new Schema({
+  userId: {
+    type: 'ObjectId',
+    ref: User,
+    required: true,
+  },
 
   interestId: {
     type: 'ObjectId',
