@@ -4,7 +4,6 @@ const routes = [
   // users
   'get    /users                    user/find',
   'get    /user/me                  user/me',
-  'patch  /user/update              user/username',
 
   // upload
   'get    /upload/signed-url        upload/getSignedUrl',
