@@ -9,7 +9,7 @@ const routes = [
   'get    /upload/signed-url        upload/getSignedUrl',
 
   // subscribe
-  'post   /subscribe                subscription/createOne',
+  'post    /subscribe                subscription/createOne',
 
   // // Interest
   // 'post   /interest     interest/createOne',
