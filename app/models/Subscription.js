@@ -1,26 +1,25 @@
 const mongoose = require('mongoose');
 // const Interest = require('./Interest');
-
 const User = require('./User');
 
-const SubcriptionSchema = new mongoose.Schema({
-  // interestId: {
-  //     type: 'OjectId',
-  //     ref: Interest,
-  // },
+const SubscriptionSchema = new mongoose.Schema({
   userId: {
-    type: 'OjectId',
+    type: 'ObjectId',
     ref: User,
     required: true,
   },
+  // interestId: {
+  //   type: 'ObjectId',
+  //   ref: Interest,
+  // },
   subscribed: {
     type: 'Boolean',
     default: false,
   },
 }, {
-  collection: 'subcription',
+  collection: 'subscription',
   timestamps: true,
   userAudits: true,
 });
 
-module.exports = mongoose.model('Subcription', SubcriptionSchema);
+module.exports = mongoose.model('Subscription', SubscriptionSchema);

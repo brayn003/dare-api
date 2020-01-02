@@ -10,6 +10,11 @@ const routes = [
 
   // Interest
   'post   /daresCompleted     darescompleted/daresCompleted',
+  // 'post   /interest     interest/createOne',
+
+  // subscribe
+  'post    /subscribe                subscription/createOne',
+
 
   // Interest
   'get   /interest                  interest/getInterests',
