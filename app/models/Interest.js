@@ -1,14 +1,17 @@
 const mongoose = require('mongoose');
 
 const InterestSchema = new mongoose.Schema({
-  Interest: {
+  title: {
     type: 'string',
     required: true,
     unique: true,
   },
-  ImageURL: String,
+  imageURL: {
+    type: 'string',
+    required: true,
+  },
 }, {
-  collection: 'Interest',
+  collection: 'interest',
   userAudits: true,
   timestamps: true,
 });
