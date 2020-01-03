@@ -17,8 +17,8 @@ const routes = [
 
   // Dare
   'post    /dares                      dare/createDare',
-
-
+  'get     /dares                     dare/list',
+  'get     /dare/:id                  dare/one',
 ];
 
 
