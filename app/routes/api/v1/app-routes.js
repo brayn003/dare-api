@@ -9,20 +9,20 @@ const routes = [
   'get    /upload/signed-url        upload/getSignedUrl',
 
   // Interest
-  'post   /daresCompleted     darescompleted/daresCompleted',
+  'post   /daresCompleted           darescompleted/daresCompleted',
 
   // subscribe
-  'post    /subscribe                subscription/createOne',
+  'post    /subscribe               subscription/createOne',
 
 
   // Interest
-  'get     /interest                  interest/getInterests',
-  'post    /interest                  interest/createInterest',
+  'get     /interests               interest/getInterests',
+  'post    /interest                interest/createInterest',
 
   // Dare
-  'post    /dares                     dare/createDare',
-  'get     /dares                     dare/getDare',
-  'get     /dare/:id                  dare/one',
+  'post    /dare                    dare/createDare',
+  'get     /dares                   dare/getDare',
+  'get     /dare/:id                dare/one',
 ];
 
 
