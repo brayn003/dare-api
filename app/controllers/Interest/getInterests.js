@@ -1,8 +1,7 @@
 const Interest = require('~models/Interest');
 
 const controller = async (req, res) => {
-  const { params } = req;
-  const Interests = await Interest.getInterest(params);
+  const Interests = await Interest.find();
   return res.json(Interests);
 };
 

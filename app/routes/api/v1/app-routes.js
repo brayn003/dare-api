@@ -8,7 +8,7 @@ const routes = [
   // upload
   'get    /upload/signed-url        upload/getSignedUrl',
 
-  // Interest
+  // dare
   'post   /daresCompleted           darescompleted/daresCompleted',
 
   // subscribe
