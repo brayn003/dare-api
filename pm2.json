@@ -1,9 +1,9 @@
 {
-    "name": "dare-api",
-    "script": ".",
-    "instances" : "max",
-    "exec_mode" : "cluster",
-    "env": {
-      "NODE_ENV": "production"
-    }
+  "name": "dare-api",
+  "script": ".",
+  "instances" : "max",
+  "exec_mode" : "cluster",
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

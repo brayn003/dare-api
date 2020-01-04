@@ -1,4 +1,4 @@
-const DaresCompleted = require('../../models/daresCompleted');
+const DaresCompleted = require('../../models/DaresCompleted');
 
 module.exports = async (req, res) => {
   const { body } = req;
