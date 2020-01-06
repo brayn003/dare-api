@@ -7,9 +7,10 @@ const DaresCompletedSchema = new mongoose.Schema({
 
   userId: { type: 'ObjectId', ref: User, required: true },
   dareId: { type: 'ObjectId', ref: Dare, required: true },
-  imageUrl: { type: 'String' },
-  longitude: { type: 'Number', required: true },
-  latitude: { type: 'Number', required: true },
+  imageUrl: 'String',
+  longitude: 'Number',
+  latitude: 'Number',
+  completed: { type: 'Boolean', default: false },
 
 
 }, {
@@ -19,4 +20,4 @@ const DaresCompletedSchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model('Dares_Completed', DaresCompletedSchema);
+module.exports = mongoose.model('DaresCompleted', DaresCompletedSchema);
