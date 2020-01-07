@@ -9,7 +9,8 @@ const routes = [
   'get    /upload/signed-url        upload/getSignedUrl',
 
   // dares -completed
-  'post   /dare/:dareId/accept      darescompleted/accepted',
+  'get    /dare/:id                 darescompleted/one',
+  'post   /dare/:dareId/accept          darescompleted/accepted',
   'post   /dare/:dareId/complete/:id    darescompleted/complete',
 
   // subscribe
