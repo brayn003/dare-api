@@ -9,7 +9,7 @@ const routes = [
   'get    /upload/signed-url        upload/getSignedUrl',
 
   // dares -completed
-  'get    /dare/:id                 darescompleted/one',
+  'get    /dare-completed/:id                 darescompleted/one',
   'post   /dare/:dareId/accept          darescompleted/accepted',
   'post   /dare/:dareId/complete/:id    darescompleted/complete',
 
