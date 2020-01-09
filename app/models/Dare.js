@@ -21,7 +21,7 @@ const DareSchema = new Schema({
   latitude: Number,
   longitude: Number,
   image: String,
-  time: Number,
+  time: String,
 },
 {
   collection: 'dare',
