@@ -15,7 +15,8 @@ const routes = [
   'post   /dare/:dareId/complete/:id    darescompleted/complete',
 
   // subscribe
-  'post    /subscribe               subscription/createOne',
+  'post     /subscribe               subscription/createOne',
+  'post     /subscriptions           subscription/createMany',
 
 
   // Interest
