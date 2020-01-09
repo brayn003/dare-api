@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// const Interest = require('./Interest');
+const Interest = require('./Interest');
 const User = require('./User');
 
 const SubscriptionSchema = new mongoose.Schema({
@@ -8,10 +8,10 @@ const SubscriptionSchema = new mongoose.Schema({
     ref: User,
     required: true,
   },
-  // interestId: {
-  //   type: 'ObjectId',
-  //   ref: Interest,
-  // },
+  interestId: {
+    type: 'ObjectId',
+    ref: Interest,
+  },
   subscribed: {
     type: 'Boolean',
     default: false,
